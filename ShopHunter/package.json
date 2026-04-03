@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "tsx src/server/index.ts",
-    "build": "tsc -p tsconfig.server.json && npm run build:client",
-    "build:client": "cd client && npm run build",
+    "build": "tsc -p tsconfig.server.json && yarn build:client",
+    "build:client": "cd client && yarn build",
     "start": "node dist/server/index.js",
-    "postinstall": "tsc -p tsconfig.server.json && cd client && npm install && npm run build"
+    "postinstall": "tsc -p tsconfig.server.json && cd client && yarn install && yarn build"
   },
   "engines": {
     "node": ">=18"
