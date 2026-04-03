@@ -29,6 +29,9 @@ if (nodeEnv === "local") {
   });
 
   prisma = new PrismaClient({ adapter });
+
+  // eslint-disable-next-line no-console
+  console.log("[ShopHunter] Using Turso database URL:", tursoUrl);
 }
 
 app.use(cors());
