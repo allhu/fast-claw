@@ -158,7 +158,7 @@ function App() {
             marginBottom: 12
           }}
         >
-          ShopHunter
+          ShopCheck
         </h1>
         <p
           style={{
