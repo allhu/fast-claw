@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import cors from "cors";
 import { PrismaClient } from "@prisma/client";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { PrismaLibSQL } from "@prisma/adapter-libsql";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -23,7 +23,7 @@ if (nodeEnv === "local") {
     throw new Error("DATABASE_URL 未配置（Turso URL）");
   }
 
-  const adapter = new PrismaLibSql({
+  const adapter = new PrismaLibSQL({
     url: tursoUrl,
     authToken: tursoToken
   });
